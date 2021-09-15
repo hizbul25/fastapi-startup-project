@@ -1,17 +1,5 @@
-![DOGEAPI](docs/Images/header.svg)
 
-<p align="center">
-   <img src="https://img.shields.io/badge/Dev-Yezz123-green?style"/>
-   <img src="https://img.shields.io/badge/language-python-blue?style"/>
-   <img src="https://img.shields.io/github/stars/yezz123/DogeAPI"/>
-   <img src="https://img.shields.io/github/forks/yezz123/DogeAPI"/>
-   <img src="https://visitor-badge.laobi.icu/badge?page_id=yezz123.Pretty-Readme">
-   <img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=style=flat&color=BC4E99" alt="Star Badge"/>
-   <a href="https://github.com/yezz123/DogeAPI/actions/workflows/docker-publish.yml"><img src="https://github.com/yezz123/DogeAPI/actions/workflows/docker-publish.yml/badge.svg?branch=main"/></a>
-
-</p>
-
-# DogeAPI
+# FastAPI Startup Project
 
 API with high performance built with FastAPI & SQLAlchemy, help to improve connection with your Backend Side to create a simple blog and Cruds with OAuth2PasswordBearer ⛏
 
@@ -27,10 +15,10 @@ API with high performance built with FastAPI & SQLAlchemy, help to improve conne
 
 ```sh
 # clone the repo
-$ git clone https://github.com/yezz123/DogeAPI
+$ git clone https://github.com/hizbul25/fastapi-startup-project
 
 # move to the project folder
-$ cd DogeAPI
+$ cd fastapi-startup-project
 ```
 
 ### Creating virtual environment
@@ -39,7 +27,7 @@ $ cd DogeAPI
 
 ```shell
 # creating virtual environment
-$ virtualenv venv
+$ virtualenv venv -p python3
 
 # activate virtual environment
 $ source venv/bin/activate
@@ -60,7 +48,7 @@ $ uvicorn main:app --reload
 ### Environment variables
 
 - `SECRET_KEY`: A secret key for signing Json Web Token.
-- `SQLALCHEMY_DATABASE_URL`: The database url to connect to the database.
+- `DATABASE_URL`: The database url to connect to the database.
 - `ACCESS_TOKEN_EXPIRE_MINUTES`: The access token expire minutes.
 
 > change all the environment variables in the `.env.sample` and don't forget to rename it to `.env`.
@@ -101,13 +89,12 @@ Includes preconfigured packages to kick start DogeAPI by just setting appropriat
 | [passlib](https://passlib.readthedocs.io/en/stable/)  | a password hashing library for Python 2 & 3, which provides cross-platform implementations of over 30 password hashing algorithms         |
 | [bcrypt](https://github.com/pyca/bcrypt/)               | Good password hashing for your software and your servers.    |
 | [python-multipart](https://github.com/andrew-d/python-multipart) | streaming multipart parser for Python.   |
+| [albemic](https://alembic.sqlalchemy.org/en/latest/) | s a lightweight database migration tool for usage with the SQLAlchemy Database Toolkit for Python.   |
 
 `yapf` packages for `linting and formatting`
 
 ## Contributing
 
-- Join the DOGEAPI Creator and Contribute to the Project if you have any enhancement or add-ons to create a good and Secure Project, Help any User to Use it in a good and simple way.
-- Check all information here at [docs's Folder](docs) to understand to how to contribute or to Read the Code of Conduct.
 
 ## License
 
