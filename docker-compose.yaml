@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        command: uvicorn main:app --reload --workers 1 --host 0.0.0.0 --port 8000
+        volumes:
+            - ./fastapi_start_app:/usr/src/app
+        ports:
+            - 8000:8000
+        environment:
+            - ENVIRONMENT=dev
+            - TESTING=0
+            - DATABASE_URL=postgresql://fastapi_startup_project_db_user:fastapi_startup_project_db_pass@db/fastapi_startup_project_db_dev
+    db:
+        image: postgres:13.4-alpine
+        volumes:
+            - fastapi_startup_project_data:/var/lib/postgresql/data/
+        environment:
+            - POSTGRES_USER=fastapi_startup_project_db_user
+            - POSTGRES_PASSWORD=fastapi_startup_project_db_pass
+            - POSTGRES_DB=fastapi_startup_project_db_dev
+        ports: 
+            - 54320:5432
+volumes:
+    fastapi_startup_project_data:
